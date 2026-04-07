@@ -1,0 +1,48 @@
+{
+  "title": "HTML Text Extractor & Cleaner",
+  "description": "Paste any raw HTML and get back clean, structured text — title, headings, paragraphs, links, images, word count, and reading time.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "html": {
+      "title": "Raw HTML",
+      "type": "string",
+      "description": "Paste the full HTML content you want to extract text from. This is the only required field.",
+      "editor": "textarea",
+      "prefill": "<!DOCTYPE html><html><head><title>Sample Page</title><meta name=\"description\" content=\"A sample page for testing the HTML Text Extractor.\"></head><body><h1>Welcome to the Sample Page</h1><h2>About this tool</h2><p>This Actor extracts clean, structured text from any raw HTML you provide.</p><p>It returns the title, headings, paragraphs, links, images, word count and estimated reading time.</p><h2>Features</h2><p>No web scraping involved. You supply the HTML, the Actor does the rest.</p><a href=\"https://apify.com\">Visit Apify</a><a href=\"https://docs.apify.com\">Read the Docs</a><img src=\"https://example.com/image.png\" alt=\"Example image\"></body></html>"
+    },
+    "extractHeadings": {
+      "title": "Extract Headings",
+      "type": "boolean",
+      "description": "When enabled, all H1–H6 headings are extracted and returned with their level (H1, H2, etc.) and text.",
+      "default": true
+    },
+    "extractLinks": {
+      "title": "Extract Links",
+      "type": "boolean",
+      "description": "When enabled, all anchor tags with href attributes are extracted (duplicates removed). Fragment-only and javascript: links are skipped.",
+      "default": true
+    },
+    "extractImages": {
+      "title": "Extract Images",
+      "type": "boolean",
+      "description": "When enabled, all img tags are extracted with their src and alt attributes.",
+      "default": true
+    },
+    "cleanWhitespace": {
+      "title": "Clean Whitespace",
+      "type": "boolean",
+      "description": "When enabled, extra spaces, tabs, and excessive blank lines are removed from the extracted body text.",
+      "default": true
+    },
+    "minWordLength": {
+      "title": "Minimum Word Length (for word count)",
+      "type": "integer",
+      "description": "Words shorter than this value are excluded from the word count. Set to 1 to count all words.",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 20
+    }
+  },
+  "required": ["html"]
+}

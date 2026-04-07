@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "html-text-extractor-cleaner",
+  "title": "HTML Text Extractor & Cleaner",
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 128,
+  "maxMemoryMbytes": 512,
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "input": "./input_schema.json"
+}

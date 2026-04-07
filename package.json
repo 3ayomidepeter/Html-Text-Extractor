@@ -1,0 +1,16 @@
+{
+  "name": "html-text-extractor-cleaner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Extracts and cleans text content from raw HTML. Returns structured data including title, headings, paragraphs, links, images, word count, and reading time.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "apify": "3.1.4",
+    "cheerio": "1.0.0-rc.12"
+  },
+  "license": "Apache-2.0"
+}
